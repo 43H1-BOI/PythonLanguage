@@ -1,0 +1,2 @@
+print("Simple Interest")
+
