@@ -16,4 +16,4 @@ else : # num 2 >= num1
         max = num3    
 
 
-print("Maximum = ",max)        
+print("Maximum = ",max)
