@@ -234,25 +234,18 @@ for i in range(num2-1):
         * 
 '''
 
+
 num = 5
+num2 = num * 2
 
-for i in range(num-1):
-    for j in range(num-i-1):
-        print(" ",end = " ")
-
-    for j in  range(i+1):
-        print("*",end = " ")
-    print()
-
-for i in range(num):
-
-    for j in  range(i):
-        print(" ",end = " ")
-    
-    for j in range(num-i):
-        print("*",end = " ")
-
-    print()    
+for i in range(num2 - 1):
+    if i < num:
+        stars = i + 1
+    else:
+        stars = num2 - i - 1
+    spaces = num - stars
+    print("  " * spaces + "* " * stars)
+   
 
 
 # 11
@@ -267,9 +260,8 @@ for i in range(num):
 num = 5
 
 for i in range(num):
-    for j in range(num):
-        print(i+1,end=" ")
-    print()
+    print((str(i + 1) + " ") * num)
+
 
 
 # 12
@@ -301,9 +293,8 @@ for i in range(num):
 num = 5
 
 for i in range(num):
-    for j in  range(i+1):
-        print(i+1,end = " ")
-    print()
+    print((str(i+1) + " ")* (i+1))
+    
 
 
 # 14
@@ -335,12 +326,9 @@ for i in range(num):
 num = 5
 
 for i in range(num):
-    for j in range(num -i-1):
-        print(" ",end = " ")
-
-    for j in  range(i+1):
-        print(i+1,end = " ")
-    print()
+    stars = i+1
+    spaces = num - stars
+    print("  " * spaces + (str(stars) + " ") * stars)
 
 
 # 16
@@ -351,18 +339,12 @@ for i in range(num):
       4 4 
         5 
 '''
-
 num = 5
 
 for i in range(num):
+     stars = num - i
 
-    for j in  range(i):
-        print(" ",end = " ")
-    
-    for j in range(num-i):
-        print(i+1,end = " ")
-
-    print()
+     print("  " * i + (str(i+1) + " ") * stars)
 
 
 # 17
@@ -377,9 +359,8 @@ for i in range(num):
 num = 5
 
 for i in range(num):
-    for j in range(num-i):
-        print(i+1,end=" ")
-    print()
+    stars = num - i
+    print((str(i+1) + " " ) * stars)
 
 
 # 18
@@ -394,24 +375,24 @@ for i in range(num):
 num = 5
 
 for i in range(num):
-    for j in range(num-i):
-        print(num-i,end=" ")
-    print()
+    stars = num - i
+    print((str(stars) + " " ) * stars)
+
 
 
 # 19
 '''
 1 
-2 2 
-3 3 3 
-4 4 4 4 
-5 5 5 5 5 
+2 3
+4 5 6 
+7 8 9 10 
 '''
 
-num = 5
+num = 4
 count = 1
 
 for i in range(num):
+    
     for j in  range(i+1):
         print(count,end = " ")
         count+=1
@@ -428,17 +409,10 @@ for i in range(num):
 '''
 
 num = 5
-temp = 0
 
 for i in range(num):
-    if(i%2==0):
-        temp = 0
-    else:
-        temp = 1    
-
-    for j in range(num-i):
-        print(temp,end=" ")
-    print()
+    temp = str(i % 2)
+    print((temp + " ") * (num - i))
 
 
 #21
@@ -525,9 +499,7 @@ E E E E E
 num = 5
 
 for i in range(num):
-    for j in range(num):
-        print(chr(65+i),end = " ")
-    print()    
+    print((chr(65 + i) + " ") * num)
 
 
 # 26
@@ -576,6 +548,4 @@ E E E E E
 num = 5
 
 for i in range(num):
-    for j in  range(i+1):
-        print(chr(65+i),end = " ")
-    print()
+    print((chr(65 + i) + " ") * (i + 1))
