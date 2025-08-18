@@ -3,5 +3,6 @@
     "*": false
   },
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "ms-python.python"
+  "editor.defaultFormatter": "ms-python.python",
+  "code-runner.runInTerminal": true
 }
