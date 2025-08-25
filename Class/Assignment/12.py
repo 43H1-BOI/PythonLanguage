@@ -8,4 +8,7 @@ temp = a
 a = b
 b = temp
 
+# swap 
+a,b = b,a
+
 print("a =",a,", b =",b)

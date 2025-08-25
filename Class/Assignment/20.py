@@ -10,11 +10,11 @@
 
 
 # Check This :
-# num = int(input("Enter a Number : "))
-# flag = 0
+num = int(input("Enter a Number : "))
+flag = 0
 
-# while num <= 0:
-#     flag += 1
-#     num = num << 1
+while num > 0:
+    flag += 1
+    num = num >> 1
 
-# print("Count =",flag)
+print("Count =",flag)
