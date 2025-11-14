@@ -1,8 +1,10 @@
 # Python Assignment-1
-## Basic Programs-
+
+## Basic Programs
+
 1. Simple interest
 2. Calculator ✔️
-3. Area of circle ,triangle 
+3. Area of circle ,triangle
 4. Find maximum of 3 nos ✔️
 5. Check given no is even or odd ✔️
 6. Check given year is leap year or not ✔️
@@ -13,45 +15,46 @@
 11. fibonacci series
 12. Pattern programs ✔️
 13. Number Pattern Semi-Pyramid
-```
-1. Pattern ✔️
-1 
-1 2 
-1 2 3 
-1 2 3 4 
-```
-```
-2. Pattern ✔️
-Enter the number of rows: 5
-*
-* *
-* * *
-* * * *
-* * * * *
-```
+  a. Pattern ✔️
 
-3. Pattern
-```
-num = 5
-* * * * * 
-* * * * *
-* * * * *
-* * * * *
-* * * * *
-```
+  ```num = 4
+  1 
+  1 2 
+  1 2 3 
+  1 2 3 4 
+  ```
 
-4. Pattern
-```
-num = 5
-        *
-      * *
-    * * *
+  b. Pattern ✔️
+
+  ```Enter the number of rows: 5
+  *
+  * *
+  * * *
   * * * *
-* * * * *
-```
+  * * * * *
+    ```
 
+  c. Pattern ✔️
 
-14. Python program to interchange first and last elements in a list
+  ```num = 5
+  * * * * * 
+  * * * * *
+  * * * * *
+  * * * * *
+  * * * * *
+  ```
+  
+  d. Pattern  ✔️
+
+  ```num = 5
+          *
+        * *
+      * * *
+    * * * *
+  * * * * *
+  ```
+
+14. Python program to interchange first and last elements in a list ✔️
 15. Python program to swap two elements in a list
 16. Python  program to Swap elements in String list
 17. Python | Ways to find length of list

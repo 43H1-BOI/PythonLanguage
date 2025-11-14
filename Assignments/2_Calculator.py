@@ -28,8 +28,11 @@ match operator :
         res = num1 / num2
     case "%" :
         res = num1 % num2 
+    case "**" :
+        res = num1 ** num2 
     case any :
         print(operator + " is an Invalid Operator")
-        res = "Not a Valid Operation" 
+        # res = "Not a Valid Operation" 
 
-print("{num1} {operator} {num2} = {res}".format(num1 = num1 ,operator = operator,num2 = num2,res = res))
+if(operator in ['+','-','*','/','%',"**"]):
+    print("{num1} {operator} {num2} = {res}".format(num1 = num1 ,operator = operator,num2 = num2,res = res))
