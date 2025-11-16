@@ -206,59 +206,6 @@ print(f"Public: {obj.public}")
 print(f"Protected: {obj._protected}")
 
 print("\n" + "=" * 70)
-print("\n7. METHOD OVERLOADING AND OVERRIDING")
-print("-" * 70)
-
-print("\nMethod Overloading (using default parameters):")
-
-class MathOps:
-    def add(self, a, b=0, c=0):
-        return a + b + c
-
-math = MathOps()
-print(f"add(5): {math.add(5)}")
-print(f"add(5, 10): {math.add(5, 10)}")
-print(f"add(5, 10, 15): {math.add(5, 10, 15)}")
-
-print("\nMethod Overriding:")
-
-class Parent:
-    def show(self):
-        print("Parent class method")
-
-class Child(Parent):
-    def show(self):
-        print("Child class method")
-
-child = Child()
-child.show()
-
-print("\n" + "=" * 70)
-print("\n8. SPECIAL METHODS (MAGIC METHODS)")
-print("-" * 70)
-
-class Book:
-    def __init__(self, title, pages):
-        self.title = title
-        self.pages = pages
-    
-    def __str__(self):
-        return f"Book: {self.title}, Pages: {self.pages}"
-    
-    def __len__(self):
-        return self.pages
-    
-    def __add__(self, other):
-        return self.pages + other.pages
-
-book1 = Book("Python Basics", 200)
-book2 = Book("Advanced Python", 300)
-
-print(f"\n__str__: {book1}")
-print(f"__len__: {len(book1)} pages")
-print(f"__add__: Total pages: {book1 + book2}")
-
-print("\n" + "=" * 70)
 print("\nBENEFITS OF OOP")
 print("-" * 70)
 print("1. Code Reusability - Use existing code through inheritance")
