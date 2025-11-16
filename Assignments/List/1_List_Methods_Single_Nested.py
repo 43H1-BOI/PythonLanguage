@@ -61,50 +61,50 @@ print(f"After clear(): {temp_list}")
 print("\n--- Nested List ---")
 
 # Nested List
-nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-print(f"Original Nested List: {nested_list}")
+nList = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(f"Original Nested List: {nList}")
 
 # append() - adds list at end
-nested_list.append([10, 11, 12])
-print(f"After append([10, 11, 12]): {nested_list}")
+nList.append([10, 11, 12])
+print(f"After append([10, 11, 12]): {nList}")
 
 # insert() - adds list at specific position
-nested_list.insert(1, [0, 0, 0])
-print(f"After insert(1, [0, 0, 0]): {nested_list}")
+nList.insert(1, [0, 0, 0])
+print(f"After insert(1, [0, 0, 0]): {nList}")
 
 # extend() - adds elements from list
-nested_list.extend([[13, 14]])
-print(f"After extend([[13, 14]]): {nested_list}")
+nList.extend([[13, 14]])
+print(f"After extend([[13, 14]]): {nList}")
 
 # remove() - removes first occurrence
-nested_list.remove([0, 0, 0])
-print(f"After remove([0, 0, 0]): {nested_list}")
+nList.remove([0, 0, 0])
+print(f"After remove([0, 0, 0]): {nList}")
 
 # pop() - removes and returns last element
-removed = nested_list.pop()
-print(f"After pop(): {nested_list}")
+removed = nList.pop()
+print(f"After pop(): {nList}")
 
 # index() - returns index of list
-idx = nested_list.index([4, 5, 6])
+idx = nList.index([4, 5, 6])
 print(f"Index of [4, 5, 6]: {idx}")
 
 # count() - counts occurrences
-nested_list.append([1, 2, 3])
-count = nested_list.count([1, 2, 3])
+nList.append([1, 2, 3])
+count = nList.count([1, 2, 3])
 print(f"Count of [1, 2, 3]: {count}")
 
 # sort() - sorts nested lists
-nested_list.sort()
-print(f"After sort(): {nested_list}")
+nList.sort()
+print(f"After sort(): {nList}")
 
 # reverse() - reverses nested list
-nested_list.reverse()
-print(f"After reverse(): {nested_list}")
+nList.reverse()
+print(f"After reverse(): {nList}")
 
 # copy() - creates shallow copy
-copied_nested = nested_list.copy()
+copied_nested = nList.copy()
 print(f"Copied Nested List: {copied_nested}")
 
 # Accessing nested elements
-print(f"First element of first list: {nested_list[0][0]}")
-print(f"Second element of second list: {nested_list[1][1]}")
+print(f"First element of first list: {nList[0][0]}")
+print(f"Second element of second list: {nList[1][1]}")

@@ -80,3 +80,41 @@
 37. Python program to print all positive numbers in a range
 38. Python program to print all negative numbers in a range
 39. Python program to count positive and negative numbers in a list
+
+
+
+{ SPecial Instruction : DO All these Questions but don't add too much comments , just necesaary comments only , Give Solution with Beginner Friendly Way }
+List :- { Do this in Subfolder Assignments/List }
+1. Perform all the methods of list on single list and nested list 
+2. Perform all the list methods on tuple and nested tuple 
+3. Perform all the set method/operations on four different sets 
+4. Write the difference between list and tuple 
+5. Write a program to calculate sum and average of the list and tuple without using inbuilt function 
+6. Write a short note on modules .Write at least five functions / methods of each module
+7. Use following operations on list /tuple 
+a. Repetition operator 
+b. Iteration 
+c. Concate
+d. copy method 
+e. arrange list/tuple in both ascending and descending order 
+
+Dictionary :- { Do this in Subfolder Assignments/Dictionary }
+1. Perform all the methods of dictionary
+2. Perform the following tasks on a string 
+A. Slicing 
+B. Membership operator 
+C. Concatenation 
+D. Multiline string 
+
+3. String Basics all and methods .
+
+4. Make a program for single inheritance 
+5. Make a program for multilevel inheritance
+6. Make a program for multiple inheritance 
+7. Make a program for hierarchical inheritance 
+8. Make a program for hybrid inheritance 
+9. Write a program for method overriding 
+10. Write a program representing example of encapsulation 
+11. Write an example program of exception handling throwing 3 different kinds of exception 
+12. Write a file handling program using os module
+
