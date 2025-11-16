@@ -79,10 +79,11 @@ print(f"Symmetric Difference using ^ operator: {sym_diff_operator}")
 print("\n--- Set Comparisons ---")
 
 # issubset() - checks if all elements of one set are in another
-print(f"Is {{1, 2}} subset of Set1? {{1, 2}}.issubset(set1) = {{1, 2}.issubset(set1)}")
+subset_test = {1, 2}
+print(f"Is {subset_test} subset of Set1? {subset_test.issubset(set1)}")
 
 # issuperset() - checks if set contains all elements of another
-print(f"Is Set1 superset of {{1, 2}}? {set1.issuperset({1, 2})}")
+print(f"Is Set1 superset of {subset_test}? {set1.issuperset(subset_test)}")
 
 # isdisjoint() - checks if two sets have no common elements
 print(f"Are Set1 and Set4 disjoint? {set1.isdisjoint(set4)}")
