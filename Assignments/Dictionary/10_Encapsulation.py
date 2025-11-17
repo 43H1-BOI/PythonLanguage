@@ -1,14 +1,18 @@
-print("Encapsulation")
-print("=" * 70)
+"""
+Encapsulation - Data Hiding and Access Control
+==============================================
+Encapsulation: Wrapping data and methods within a class with controlled access
+Access Levels: public, protected (_), private (__)
+Key Tools: getter/setter methods, @property decorator
+"""
 
-# Encapsulation: Wrapping data and methods within a class
-# Access modifiers: public, protected (_), private (__)
-
-# Example 1: Basic Encapsulation
+# CORE ENCAPSULATION EXAMPLE
 class BankAccount:
+    """Demonstrates encapsulation with private data and controlled access"""
+    
     def __init__(self, account_holder, balance):
-        self.account_holder = account_holder
-        self.__balance = balance
+        self.account_holder = account_holder    # Public attribute
+        self.__balance = balance                # Private attribute
     
     def deposit(self, amount):
         if amount > 0:
@@ -25,42 +29,102 @@ class BankAccount:
             print("Insufficient balance or invalid amount")
     
     def get_balance(self):
+        """Getter method for private balance"""
         return self.__balance
     
     def display(self):
-        print(f"Account Holder: {self.account_holder}")
-        print(f"Balance: {self.__balance}")
+        return f"Account: {self.account_holder}, Balance: {self.__balance}"
 
-print("\nCreating Bank Account:")
-account = BankAccount("John", 5000)
-account.display()
+# PROPERTY DECORATOR EXAMPLE
+class Employee:
+    """Demonstrates encapsulation using @property decorator"""
+    
+    def __init__(self, name, salary):
+        self.__name = name
+        self.__salary = salary
+    
+    @property
+    def name(self):
+        """Getter for name"""
+        return self.__name
+    
+    @name.setter
+    def name(self, value):
+        """Setter for name with validation"""
+        if value.strip():
+            self.__name = value
+        else:
+            print("Name cannot be empty")
+    
+    @property
+    def salary(self):
+        """Getter for salary"""
+        return self.__salary
+    
+    @salary.setter
+    def salary(self, value):
+        """Setter for salary with validation"""
+        if value > 0:
+            self.__salary = value
+        else:
+            print("Salary must be positive")
+    
+    def display(self):
+        return f"Employee: {self.__name}, Salary: ${self.__salary}"
 
-print("\nDepositing money:")
-account.deposit(2000)
-print(f"Current Balance: {account.get_balance()}")
+# DEMONSTRATION
+def demonstrate_encapsulation():
+    """Shows encapsulation concepts with expected outputs"""
+    
+    print("Encapsulation Demo")
+    print("=" * 40)
+    
+    # Bank Account Example
+    print("Bank Account Operations:")
+    account = BankAccount("John", 5000)
+    print(account.display())                                # Output: Account: John, Balance: 5000
+    
+    account.deposit(2000)                                   # Output: Deposited: 2000
+    print(f"Balance: ${account.get_balance()}")             # Output: Balance: $7000
+    
+    account.withdraw(1500)                                  # Output: Withdrawn: 1500
+    print(f"Balance: ${account.get_balance()}")             # Output: Balance: $5500
+    
+    account.withdraw(10000)                                 # Output: Insufficient balance or invalid amount
+    
+    # Try accessing private variable
+    try:
+        print(account.__balance)                            # Will raise AttributeError
+    except AttributeError:
+        print("✓ Private variable protected")               # Output: ✓ Private variable protected
+    
+    # Employee Property Example
+    print(f"\nEmployee Property Operations:")
+    emp = Employee("Bob", 50000)
+    print(emp.display())                                    # Output: Employee: Bob, Salary: $50000
+    
+    # Using property accessors
+    emp.name = "Robert"                                     # Uses setter validation
+    emp.salary = 60000                                      # Uses setter validation
+    print(emp.display())                                    # Output: Employee: Robert, Salary: $60000
+    
+    # Invalid operations
+    emp.salary = -1000                                      # Output: Salary must be positive
+    print(emp.display())                                    # Output: Employee: Robert, Salary: $60000 (unchanged)
 
-print("\nWithdrawing money:")
-account.withdraw(1500)
-print(f"Current Balance: {account.get_balance()}")
+# Run demonstration
+if __name__ == "__main__":
+    demonstrate_encapsulation()
 
-print("\nTrying to withdraw more than balance:")
-account.withdraw(10000)
+"""
+COMMENTED OUT SECTIONS - Additional examples for learning:
 
-print("\nTrying to access private variable directly:")
-try:
-    print(account.__balance)
-except AttributeError as e:
-    print(f"Error: Cannot access private variable directly")
-
-print("\n" + "=" * 70)
-print("\nExample 2: Public, Protected, Private Members")
-print("-" * 70)
-
+# Access Modifier Examples
 class Student:
     def __init__(self, name, roll_no, marks):
-        self.name = name
-        self._roll_no = roll_no
-        self.__marks = marks
+        self.name = name        # Public - accessible everywhere
+        self._roll_no = roll_no # Protected - accessible but shouldn't be used outside class
+        self.__marks = marks    # Private - only accessible within class
     
     def get_marks(self):
         return self.__marks
@@ -68,90 +132,36 @@ class Student:
     def set_marks(self, marks):
         if 0 <= marks <= 100:
             self.__marks = marks
-            print("Marks updated successfully")
+            print("Marks updated successfully")            # Output: Marks updated successfully
         else:
-            print("Invalid marks. Must be between 0 and 100")
+            print("Invalid marks. Must be between 0 and 100")  # Output: Invalid marks...
     
     def display(self):
-        print(f"Name: {self.name}")
-        print(f"Roll No: {self._roll_no}")
-        print(f"Marks: {self.__marks}")
+        return f"Name: {self.name}, Roll: {self._roll_no}, Marks: {self.__marks}"
 
-print("\nCreating Student:")
-student = Student("Alice", "S001", 85)
+# Usage:
+# student = Student("Alice", "S001", 85)
+# print(student.name)          # Output: Alice (public access)
+# print(student._roll_no)      # Output: S001 (protected - not recommended)
+# print(student.get_marks())   # Output: 85 (proper private access)
+# student.set_marks(90)        # Output: Marks updated successfully
+# student.set_marks(150)       # Output: Invalid marks. Must be between 0 and 100
 
-# Accessing public member
-print(f"Public member (name): {student.name}")
+# Encapsulation Benefits:
+# 1. Data Hiding: Prevents unauthorized access to internal data
+# 2. Validation: Control how data is modified (business rules)
+# 3. Flexibility: Change internal implementation without breaking external code
+# 4. Maintainability: Easier to debug and maintain
+# 5. Security: Protect sensitive data from direct manipulation
 
-# Accessing protected member (can be accessed but shouldn't be)
-print(f"Protected member (roll_no): {student._roll_no}")
+# Name Mangling in Python:
+# Python doesn't have true private members, but uses name mangling
+# __attribute becomes _ClassName__attribute
+# This prevents accidental access but doesn't provide true security
 
-# Accessing private member using getter
-print(f"Private member (marks) using getter: {student.get_marks()}")
-
-print("\nUpdating marks using setter:")
-student.set_marks(90)
-student.display()
-
-print("\nTrying to set invalid marks:")
-student.set_marks(150)
-
-print("\n" + "=" * 70)
-print("\nExample 3: Encapsulation with Property Decorator")
-print("-" * 70)
-
-class Employee:
-    def __init__(self, name, salary):
-        self.__name = name
-        self.__salary = salary
-    
-    @property
-    def name(self):
-        return self.__name
-    
-    @name.setter
-    def name(self, value):
-        if value:
-            self.__name = value
-        else:
-            print("Name cannot be empty")
-    
-    @property
-    def salary(self):
-        return self.__salary
-    
-    @salary.setter
-    def salary(self, value):
-        if value > 0:
-            self.__salary = value
-        else:
-            print("Salary must be positive")
-    
-    def display(self):
-        print(f"Name: {self.__name}, Salary: {self.__salary}")
-
-print("\nCreating Employee:")
-emp = Employee("Bob", 50000)
-emp.display()
-
-print("\nAccessing properties:")
-print(f"Name: {emp.name}")
-print(f"Salary: {emp.salary}")
-
-print("\nModifying properties:")
-emp.name = "Robert"
-emp.salary = 60000
-emp.display()
-
-print("\nTrying to set invalid salary:")
-emp.salary = -1000
-emp.display()
-
-print("\n" + "=" * 70)
-print("\nBenefits of Encapsulation:")
-print("-" * 70)
-print("1. Data hiding - Prevents direct access to internal data")
-print("2. Flexibility - Internal implementation can change without affecting code")
-print("3. Validation - Control how data is accessed and modified")
-print("4. Maintainability - Easier to maintain and debug")
-print("5. Security - Protects data from unauthorized access")
+# Best Practices:
+# - Use _ for protected (internal use but accessible)
+# - Use __ for private (internal implementation details)
+# - Prefer @property over getter/setter methods for Pythonic code
+# - Validate data in setters to maintain data integrity
+"""

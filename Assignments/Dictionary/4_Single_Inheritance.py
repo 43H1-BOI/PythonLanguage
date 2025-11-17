@@ -1,5 +1,8 @@
 print("Single Inheritance")
+# Output: Single Inheritance
+
 print("=" * 70)
+# Output: ======================================================================
 
 # Single Inheritance: One child class inherits from one parent class
 
@@ -27,48 +30,56 @@ class Dog(Animal):
         print(f"Name: {self.name}, Breed: {self.breed}")
 
 print("\nCreating Dog object:")
+# Output: Creating Dog object:
+
 dog = Dog("Buddy", "Golden Retriever")
 
 # Accessing parent class methods
 dog.eat()
+# Output: Buddy is eating
+
 dog.sleep()
+# Output: Buddy is sleeping
 
 # Accessing child class methods
 dog.bark()
+# Output: Buddy is barking
+
 dog.show_info()
+# Output: Name: Buddy, Breed: Golden Retriever
 
-print("\n" + "=" * 70)
-print("\nAnother Example:")
-print("-" * 70)
+# print("\n" + "=" * 70)
+# print("\nAnother Example:")
+# print("-" * 70)
 
-# Parent class
-class Vehicle:
-    def __init__(self, brand, model):
-        self.brand = brand
-        self.model = model
-    
-    def start(self):
-        print(f"{self.brand} {self.model} is starting")
-    
-    def stop(self):
-        print(f"{self.brand} {self.model} is stopping")
+# # Parent class
+# class Vehicle:
+#     def __init__(self, brand, model):
+#         self.brand = brand
+#         self.model = model
+#     
+#     def start(self):
+#         print(f"{self.brand} {self.model} is starting")
+#     
+#     def stop(self):
+#         print(f"{self.brand} {self.model} is stopping")
 
-# Child class
-class Car(Vehicle):
-    def __init__(self, brand, model, doors):
-        super().__init__(brand, model)
-        self.doors = doors
-    
-    def open_trunk(self):
-        print(f"Opening trunk of {self.brand} {self.model}")
-    
-    def display(self):
-        print(f"Brand: {self.brand}, Model: {self.model}, Doors: {self.doors}")
+# # Child class
+# class Car(Vehicle):
+#     def __init__(self, brand, model, doors):
+#         super().__init__(brand, model)
+#         self.doors = doors
+#     
+#     def open_trunk(self):
+#         print(f"Opening trunk of {self.brand} {self.model}")
+#     
+#     def display(self):
+#         print(f"Brand: {self.brand}, Model: {self.model}, Doors: {self.doors}")
 
-print("\nCreating Car object:")
-car = Car("Toyota", "Camry", 4)
+# print("\nCreating Car object:")
+# car = Car("Toyota", "Camry", 4)
 
-car.start()
-car.stop()
-car.open_trunk()
-car.display()
+# car.start()
+# car.stop()
+# car.open_trunk()
+# car.display()
