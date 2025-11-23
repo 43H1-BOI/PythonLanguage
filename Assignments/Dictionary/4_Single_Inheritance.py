@@ -1,8 +1,5 @@
 print("Single Inheritance")
-# Output: Single Inheritance
-
 print("=" * 70)
-# Output: ======================================================================
 
 # Single Inheritance: One child class inherits from one parent class
 
@@ -30,24 +27,17 @@ class Dog(Animal):
         print(f"Name: {self.name}, Breed: {self.breed}")
 
 print("\nCreating Dog object:")
-# Output: Creating Dog object:
-
 dog = Dog("Buddy", "Golden Retriever")
 
 # Accessing parent class methods
-dog.eat()
-# Output: Buddy is eating
-
-dog.sleep()
-# Output: Buddy is sleeping
+dog.eat()  # Output: Buddy is eating
+dog.sleep()  # Output: Buddy is sleeping
 
 # Accessing child class methods
-dog.bark()
-# Output: Buddy is barking
+dog.bark()  # Output: Buddy is barking
+dog.show_info()  # Output: Name: Buddy, Breed: Golden Retriever
 
-dog.show_info()
-# Output: Name: Buddy, Breed: Golden Retriever
-
+# unnecessary: Alternative example with Vehicle and Car - similar concept already demonstrated
 # print("\n" + "=" * 70)
 # print("\nAnother Example:")
 # print("-" * 70)
