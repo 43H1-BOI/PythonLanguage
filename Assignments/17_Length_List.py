@@ -13,4 +13,4 @@ for _ in list:
 print("loop count:", count)
 
 # generator + sum
-print("sum(1 for _ in list):", sum(1 for _ in list))
+print("sum(1 for _ in list):", sum(1 for _ in list if _ != 4))

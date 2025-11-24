@@ -1,0 +1,6 @@
+pop -> remove from index 
+remove -> remove element
+
+pop -> return element
+remove -> none
+

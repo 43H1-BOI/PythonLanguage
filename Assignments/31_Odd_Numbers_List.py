@@ -17,3 +17,4 @@ print(f"Using comprehension: {odd_numbers}")
 # using filter
 odd_filter = list(filter(lambda x: x % 2 != 0, list1))
 print(f"Using filter: {odd_filter}")
+

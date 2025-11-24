@@ -17,3 +17,4 @@ print(f"Using comprehension: {negative_numbers}")
 # using filter
 negative_filter = list(filter(lambda x: x < 0, list1))
 print(f"Using filter: {negative_filter}")
+

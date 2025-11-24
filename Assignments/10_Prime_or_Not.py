@@ -9,7 +9,6 @@
 #     if(num % i == 0):
 #         flag = True
 
-
 # if(flag):
 #     print("Not Prime")
 # else :

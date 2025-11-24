@@ -9,3 +9,4 @@ print(list1)
 # This will remove list from memory
 del list2
 print(list2)
+

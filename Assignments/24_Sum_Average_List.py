@@ -17,3 +17,4 @@ average_loop = total_loop / len(list1)
 print(f"\nUsing loop:")
 print(f"Sum: {total_loop}")
 print(f"Average: {average_loop}")
+

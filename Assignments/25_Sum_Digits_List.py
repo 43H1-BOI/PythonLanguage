@@ -12,3 +12,8 @@ print(f"Sum of all digits: {total}")
 # alternative approach
 total_alt = sum(int(digit) for num in list1 for digit in str(num))
 print(f"Using comprehension: {total_alt}")
+
+# nu = [ 2  , 3, 4, 4 ]
+
+# tush = str(nu)
+# tush = "".join(nu)

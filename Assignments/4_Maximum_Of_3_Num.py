@@ -15,5 +15,4 @@ else : # num 2 >= num1
     else :
         max = num3    
 
-
 print("Maximum = ",max)

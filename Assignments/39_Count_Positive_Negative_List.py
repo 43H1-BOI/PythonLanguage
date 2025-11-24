@@ -15,8 +15,9 @@ print(f"Positive count: {positive_count}")
 print(f"Negative count: {negative_count}")
 
 # using comprehension
-positive_count_comp = len([num for num in list1 if num > 0])
+positive_count_comp = len([num for num in list1 if num >= 0])
 negative_count_comp = len([num for num in list1 if num < 0])
 print(f"\nUsing comprehension:")
 print(f"Positive count: {positive_count_comp}")
 print(f"Negative count: {negative_count_comp}")
+

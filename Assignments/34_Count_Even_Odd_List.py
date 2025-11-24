@@ -16,6 +16,9 @@ print(f"Odd count: {odd_count}")
 
 # using comprehension
 even_count_comp = len([num for num in list1 if num % 2 == 0])
+
+# evem = sum(1 for i in list1 if i % 2 == 0)
+
 odd_count_comp = len([num for num in list1 if num % 2 != 0])
 print(f"\nUsing comprehension:")
 print(f"Even count: {even_count_comp}")

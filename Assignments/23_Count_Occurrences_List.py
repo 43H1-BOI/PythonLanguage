@@ -12,3 +12,4 @@ for item in list1:
     if item == element:
         count_loop += 1
 print(f"Using loop: Element {element} occurs {count_loop} times")
+

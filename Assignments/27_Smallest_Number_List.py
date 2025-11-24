@@ -15,3 +15,7 @@ print(f"Using loop: {smallest_loop}")
 # using sorted
 smallest_sorted = sorted(list1)[0]
 print(f"Using sorted: {smallest_sorted}")
+print(list1)
+
+list1.sort()
+print(list1)

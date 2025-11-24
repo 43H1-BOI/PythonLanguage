@@ -17,3 +17,4 @@ print(f"Using comprehension: {even_numbers}")
 # using filter
 even_filter = list(filter(lambda x: x % 2 == 0, list1))
 print(f"Using filter: {even_filter}")
+

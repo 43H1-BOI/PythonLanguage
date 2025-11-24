@@ -31,6 +31,7 @@ print(f"Max tuple: {max(num)}, Min tuple: {min(num)}")
 print(f"Sum tuple: {sum(num)}")
 # Output: Sum tuple: 200
 
+
 # Operations
 print("\n3. Operations:")
 tuple1 = (1, 2, 3)
@@ -84,6 +85,9 @@ print(f"String to tuple: {tuple('hello')}")
 
 print(f"String to list: {list('hello')}")
 # Output: String to list: ['h', 'e', 'l', 'l', 'o']
+
+print(f"List to String : {"".join(list('hello'))}")
+
 
 # Unpacking
 print("\n7. Unpacking:")

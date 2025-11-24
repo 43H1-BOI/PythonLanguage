@@ -5,7 +5,7 @@ print("Positive numbers:")
 
 # using loop
 for num in list1:
-    if num > 0:
+    if num >= 0:
         print(num, end=" ")
 
 print("\n")
@@ -17,3 +17,4 @@ print(f"Using comprehension: {positive_numbers}")
 # using filter
 positive_filter = list(filter(lambda x: x > 0, list1))
 print(f"Using filter: {positive_filter}")
+
